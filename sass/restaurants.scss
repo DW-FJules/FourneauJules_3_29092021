@@ -2,19 +2,12 @@
 
 .Restaurants
 {
-    .Restaurants__Cards
+    .Restaurant__Cards
     {
-        .Restaurants__Cards article
+        article
         {
             @include RestaurantCard;
-
-            .Restaurant__Picbox
-            {
-                img.Restaurant__Pic
-                {
-                    @include SizePics;
-                }
-            }
+            
         }
     }
 }
