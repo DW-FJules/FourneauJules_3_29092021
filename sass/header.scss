@@ -1,0 +1,36 @@
+@import "./colors.scss";
+@import "./mixin.scss";
+
+header
+{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 0 0;
+    background-color: white;
+
+    #logo-accueil
+    {
+        width: 150px;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+    .icon-input
+    {
+        padding: 5px 0;
+        background-color: $grey;
+        box-shadow: inset 0px 2px 3px 0px #d1d1d1;
+
+        .formulaire
+        {
+            width: 40%;
+            border: none;
+            margin: 0 0 0 10px;
+            background-color: $grey;
+        }
+    }
+    .gradient
+    {
+        @include gradient;
+    }
+
+}

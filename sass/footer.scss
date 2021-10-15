@@ -1,0 +1,30 @@
+footer
+{
+    background-color: $dark-background;
+
+
+    h2
+    {
+        color: $white;
+        font-family: "Shrikhand", sans-serif;
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    ul
+    {
+        list-style: none;
+    }
+    li
+    {
+        color: white;
+    }
+    a
+    {
+        color: white;
+    }
+    .fas
+    {
+        margin: 0 10px 0 0;
+    }
+}

@@ -1,5 +1,75 @@
 @import "./colors.scss";
+@import "./mixin.scss";
 
-body{
-    background-color: $grey;
+body
+{
+
+
+    header
+    {
+        
+        .logo-menus
+        {
+            width: 200px;
+        }
+    }
+
+    .menu-pic
+    {
+        height: 235px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .menus
+    {
+        background-color: #f6f6f6;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        margin-top: -50px;
+        border-radius: 35px 35px 0 0;
+        position: absolute;
+        width: 100%;
+        
+
+        h1
+        {
+            @include H1menus;
+        }
+
+        h2
+        {
+            text-transform: uppercase;
+            margin: 0 0 0 10px;       
+
+            span
+            {
+                padding-bottom: 5px;
+                border-bottom: 3px solid #99e2d0;               
+
+            }
+        }
+        a
+        {
+            display: flex;
+            width: 93%;
+            border-radius: 10px;
+            margin: 20px 0 20px 10px;
+            overflow: hidden;
+            cursor: pointer;
+            
+            h3
+            {
+                margin: 0;
+            }
+            p
+            {
+                margin: 0;
+            }
+        }
+        .order
+        {
+            @include gradient;
+            
+        }
+    }
 }

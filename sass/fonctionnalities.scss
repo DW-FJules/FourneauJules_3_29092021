@@ -1,0 +1,15 @@
+@import "./mixin.scss";
+.Functions
+{
+    
+    .StepBox
+    {
+        @include StepBox;
+
+        
+        .NumberStep
+        {
+            @include NumberStep;
+        }
+    }
+}

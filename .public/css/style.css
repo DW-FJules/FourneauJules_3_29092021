@@ -4,8 +4,157 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-body {
+body header .logo-menus {
+  width: 200px;
+}
+body .menu-pic {
+  height: 235px;
+  object-fit: cover;
+  width: 100%;
+}
+body .menus {
+  background-color: #f6f6f6;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  margin-top: -50px;
+  border-radius: 35px 35px 0 0;
+  position: absolute;
+  width: 100%;
+}
+body .menus h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  margin: 0 0 0 10px;
+}
+body .menus h2 {
+  text-transform: uppercase;
+  margin: 0 0 0 10px;
+}
+body .menus h2 span {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #99e2d0;
+}
+body .menus a {
+  display: flex;
+  width: 93%;
+  border-radius: 10px;
+  margin: 20px 0 20px 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+body .menus a h3 {
+  margin: 0;
+}
+body .menus a p {
+  margin: 0;
+}
+body .menus .order {
+  background: linear-gradient(#ff79da, #9356dc);
+  padding: 15px;
+  color: white;
+  border: 0px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 4px 2px #d1d1d1;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 0 0;
+  background-color: white;
+}
+header #logo-accueil {
+  width: 150px;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+header .icon-input {
+  padding: 5px 0;
   background-color: #F2F2F2;
+  box-shadow: inset 0px 2px 3px 0px #d1d1d1;
+}
+header .icon-input .formulaire {
+  width: 40%;
+  border: none;
+  margin: 0 0 0 10px;
+  background-color: #F2F2F2;
+}
+header .gradient {
+  background: linear-gradient(#ff79da, #9356dc);
+  padding: 15px;
+  color: white;
+  border: 0px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 4px 2px #d1d1d1;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.Functions .StepBox {
+  padding: 20px 20px 20px 25px;
+  font-weight: bold;
+  background-color: #f6f6f6;
+  box-shadow: 2px 4px 8px 0px #eaeaea;
+  border-radius: 15px;
+  margin: 0 0 20px 0;
+}
+.Functions .StepBox .NumberStep {
+  border-radius: 100%;
+  background-color: #9356DC;
+  padding: 4px 8px 4px;
+  /*add padding a voir*/
+  color: white;
+}
+
+.Restaurants .Restaurants__Cards .Restaurants__Cards article {
+  background-color: white;
+  border-radius: 15px;
+  margin: 10px;
+  padding-bottom: 10px;
+  height: 250px;
+  box-shadow: 0px 4px 5px 0px;
+}
+.Restaurants .Restaurants__Cards .Restaurants__Cards article .Restaurant__Picbox img.Restaurant__Pic {
+  object-fit: cover;
+  height: 140px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  position: relative;
+}
+
+footer {
+  background-color: #353535;
+}
+footer h2 {
+  color: white;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+footer ul {
+  list-style: none;
+}
+footer li {
+  color: white;
+}
+footer a {
+  color: white;
+}
+footer .fas {
+  margin: 0 10px 0 0;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.fas {
+  color: #7e7e7e;
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,4 +4,24 @@ body
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
+
+
+
+
 @import "./menu.scss";
+@import "./header.scss";
+@import "./mixin.scss";
+@import "./fonctionnalities.scss";
+@import "./restaurants.scss";
+@import "./footer.scss";
+
+a
+{
+    @include link;
+}
+
+.fas
+{
+    color: $dark-grey;
+    margin: 0 10px;
+}
