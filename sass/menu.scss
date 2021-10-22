@@ -22,13 +22,14 @@ body
     }
     .menus
     {
-        background-color: #f6f6f6;
+        background-color: #f2f2f2;
         padding-top: 10px;
         padding-bottom: 50px;
         margin-top: -50px;
-        border-radius: 35px 35px 0 0;
-        position: absolute;
-        width: 100%;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        position: relative;
+        overflow: hidden;
         
 
         h1
@@ -36,39 +37,69 @@ body
             @include H1menus;
         }
 
+        .heart_menu
+        {
+            @include HeartMenu;
+        }
+
         h2
         {
             text-transform: uppercase;
-            margin: 0 0 0 10px;       
+            margin: 0 0 0 10px;
+            font-size: 1em;
 
-            span
-            {
-                padding-bottom: 5px;
-                border-bottom: 3px solid #99e2d0;               
-
-            }
         }
+
+        article h2:after /*Border Entréés/Plats/Desserts*/
+        {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #99E2D0;
+            margin: 5px 0 0 0;
+        }
+
         a
         {
+            background-color: white;
             display: flex;
             width: 93%;
             border-radius: 10px;
             margin: 20px 0 20px 10px;
             overflow: hidden;
             cursor: pointer;
+            position: relative;
             
-            h3
+            .name-plat
             {
-                margin: 0;
+                margin: 10px 0 10px 10px;
+            
+                h3
+                {
+                    margin: 0 0 3px 0;
+                    font-size: 1em;
+                }
+                p
+                {
+                    margin: 0;
+                    font-size: .8em;
+                }
             }
-            p
+            .price
             {
-                margin: 0;
+                position: absolute;
+                overflow: hidden;
+                right: 10px;                
+                top: 20px;
+                font-size: .8em;
+                font-weight: 600;
             }
         }
         .order
         {
             @include gradient;
+            
             
         }
     }

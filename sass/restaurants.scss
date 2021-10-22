@@ -2,12 +2,60 @@
 
 .Restaurants
 {
+    h2
+    {
+        margin: 20px;
+    }
     .Restaurant__Cards
     {
         article
         {
             @include RestaurantCard;
             
+
+            .Restaurants__Picbox
+            {
+                
+
+                .Restaurants__Pic
+                {
+                    @include SizePics;
+                }
+
+                .new
+                {
+                    @include New;
+                }
+            }
+
+            .Restaurants__Text
+            {
+
+
+                *
+                {
+                    margin: 0 0 0 10px;
+                }
+            }
+            .heart_card
+            {
+                @include HeartCard;
+            
+            }
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2560px)
+{
+    .Restaurant__Cards
+    {
+        display: flex;
+
+        article
+        {
+            width: 50%;
         }
     }
 }

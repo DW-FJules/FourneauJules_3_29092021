@@ -1,13 +1,15 @@
 @mixin gradient
 {
     background: linear-gradient(#ff79da, #9356dc);
-    padding: 15px;
+    padding: 15px 35px;
     color: white;
     border: 0px;
     border-radius: 20px;
     box-shadow: 0px 3px 4px 2px #d1d1d1;
     cursor: pointer;
     font-size: 1em;
+    margin: auto;
+    display: flex;
 }
 
 @mixin link
@@ -19,12 +21,13 @@
 
 @mixin StepBox
 {
-    padding: 20px 20px 20px 25px;
+    padding: 20px 0;
     font-weight: bold;
     background-color: #f6f6f6;
     box-shadow: 2px 4px 8px 0px #eaeaea;
     border-radius: 15px;
-    margin: 0 0 20px 0;
+    margin: 15px 5px 15px 30px;
+    width: 85%;
 }
 
 @mixin NumberStep
@@ -32,17 +35,19 @@
     border-radius: 100%;
     background-color: $primary-color;
     padding: 4px 8px 4px; /*add padding a voir*/
-    color: white;
+    color: $white;
+    position: relative;
+    left: -10px;
 }
 
 @mixin RestaurantCard /* Articles */
 {
-    background-color: white;
+    background-color: $white;
     border-radius: 15px;
     margin: 10px;
     padding-bottom: 10px;
-    height: 250px;
-    box-shadow: 0px 4px 5px 0px;
+    box-shadow: 0px 4px 5px 0px #cdcdcd;
+    position: relative;
 }
 
 @mixin SizePics
@@ -51,21 +56,40 @@
     height: 140px;
     width: 100%;
     border-radius: 15px 15px 0px 0px;
-    position: relative;
 }
 
 @mixin New
 {
     position: absolute;
     background-color: $tertiary-color;
+    color: #2c9c81;
     border: 0;
     padding: 5px 10px;
     font-weight: 600;
+    right: 10px;
+    top: 10px;
 }
+
+@mixin HeartCard
+{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    
+}
+
+@mixin HeartMenu
+{
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    font-size: 1.5em;
+}
+
 
 @mixin H1menus
 {
     font-family: "Shrikhand", sans-serif;
     font-weight: 400;
-    margin: 0 0 0 10px;
+    margin: 20px 0 15px 10px;
 }
