@@ -1,7 +1,11 @@
 footer
 {
+    @media screen and (min-width: 1024px) and (max-width: 2560px)
+    {
+         /*display flex*/
+    }
     background-color: $dark-background;
-    margin-bottom: 0;
+    overflow: hidden;
 
 
     h2

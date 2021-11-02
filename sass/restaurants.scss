@@ -8,9 +8,21 @@
     }
     .Restaurant__Cards
     {
+        @media screen and (min-width: 1024px) and (max-width: 2560px)
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
         article
         {
             @include RestaurantCard;
+            @media screen and (min-width: 1024px) and (max-width: 2560px)
+            {
+                width: 48%;
+            }
             
 
             .Restaurants__Picbox
@@ -43,19 +55,6 @@
             
             }
             
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 2560px)
-{
-    .Restaurant__Cards
-    {
-        display: flex;
-
-        article
-        {
-            width: 50%;
         }
     }
 }

@@ -33,6 +33,16 @@ body .menus .heart_menu {
   top: 35px;
   font-size: 1.5em;
 }
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
+  body .menus .flex {
+    display: flex;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 2560px) {
+  body .menus .flex article {
+    width: 40%;
+  }
+}
 body .menus h2 {
   text-transform: uppercase;
   margin: 0 0 0 10px;
@@ -89,7 +99,6 @@ body .menus .order {
 }
 
 header {
-  width: 100%;
   text-align: center;
   padding: 10px 0 0 0;
   background-color: white;
@@ -100,12 +109,13 @@ header #logo-accueil {
   box-sizing: border-box;
 }
 header .icon-input {
+  display: flex;
+  justify-content: center;
   padding: 5px 0;
   background-color: #F2F2F2;
   box-shadow: inset 0px 2px 3px 0px #d1d1d1;
 }
 header .icon-input .formulaire {
-  width: 40%;
   border: none;
   margin: 0 0 0 10px;
   background-color: #F2F2F2;
@@ -153,6 +163,14 @@ header .gradient {
 .Restaurants h2 {
   margin: 20px;
 }
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
+  .Restaurants .Restaurant__Cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+}
 .Restaurants .Restaurant__Cards article {
   background-color: white;
   border-radius: 15px;
@@ -160,6 +178,11 @@ header .gradient {
   padding-bottom: 10px;
   box-shadow: 0px 4px 5px 0px #cdcdcd;
   position: relative;
+}
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
+  .Restaurants .Restaurant__Cards article {
+    width: 48%;
+  }
 }
 .Restaurants .Restaurant__Cards article .Restaurants__Picbox .Restaurants__Pic {
   object-fit: cover;
@@ -186,17 +209,14 @@ header .gradient {
   bottom: 20px;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
-  .Restaurant__Cards {
-    display: flex;
-  }
-  .Restaurant__Cards article {
-    width: 50%;
-  }
-}
 footer {
   background-color: #353535;
-  margin-bottom: 0;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
+  footer {
+    /*display flex*/
+  }
 }
 footer h2 {
   color: white;
