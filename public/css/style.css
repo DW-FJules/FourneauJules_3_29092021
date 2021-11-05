@@ -208,6 +208,10 @@ header .gradient {
   right: 20px;
   bottom: 20px;
 }
+.Restaurants .Restaurant__Cards article .heart_card .fa-heart:hover {
+  font-weight: 600;
+  color: purple;
+}
 
 footer {
   background-color: #353535;

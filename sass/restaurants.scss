@@ -52,7 +52,14 @@
             .heart_card
             {
                 @include HeartCard;
-            
+                .fa-heart
+                {
+                    &:hover
+                    {
+                        font-weight: 600;
+                        color: purple;
+                    }
+                }
             }
             
         }
