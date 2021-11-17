@@ -1,4 +1,4 @@
-@import "./mixin.scss";
+@import "mixin";
 
 .Restaurants
 {
@@ -62,10 +62,11 @@
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-size: auto;
-                        animation: progress-heart 0.8s ease;
+                        transition:all 2s ease;
                     }
                 }
             }
+           
             
         }
     }

@@ -208,14 +208,26 @@ header .gradient {
   right: 20px;
   bottom: 20px;
 }
-.Restaurants .Restaurant__Cards article .heart_card .fa-heart:hover {
+.Restaurants .Restaurant__Cards article .heart_card .fa-heart {
   font-weight: 600;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: auto;
-  animation: progress-heart 0.8s ease;
+  background: linear-gradient(to right, red 50%, blue 50%);
+  background-size: 200% 100%;
+  background-position:left bottom;
+  margin-left:10px;
+  transition:all 2s ease;
+}
+.border
+{
+  width: 10px;
+  height: 10px;
+  border-width: 2px;
+  border-color: #353535;
+  background-color: #9356DC;
+}
+.fa-heart:hover
+{
+  background-position:right bottom;
+
 }
 
 footer {
