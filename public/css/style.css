@@ -210,7 +210,12 @@ header .gradient {
 }
 .Restaurants .Restaurant__Cards article .heart_card .fa-heart:hover {
   font-weight: 600;
-  color: purple;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: auto;
+  animation: progress-heart 0.8s ease;
 }
 
 footer {
