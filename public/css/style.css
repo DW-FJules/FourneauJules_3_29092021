@@ -57,7 +57,7 @@ body .menus article h2:after {
   background-color: #99E2D0;
   margin: 5px 0 0 0;
 }
-body .menus a {
+body .menus .select {
   background-color: white;
   display: flex;
   width: 93%;
@@ -68,23 +68,24 @@ body .menus a {
   position: relative;
   justify-content: space-between;
 }
-body .menus a .name-plat {
+body .menus .select .name-plat {
   margin: 10px 0 10px 10px;
 }
-body .menus a .name-plat h3 {
+body .menus .select .name-plat h3 {
   margin: 0 0 3px 0;
   font-size: 1em;
 }
-body .menus a .name-plat p {
+body .menus .select .name-plat p {
   margin: 0;
   font-size: 0.8em;
 }
-body .menus a .price {
+body .menus .select .content-price {
   display: flex;
-  position: absolute;
   overflow: hidden;
-  right: 10px;
-  top: 20px;
+}
+body .menus .select .price {
+  display: flex;
+  overflow: hidden;
   font-size: 0.8em;
   font-weight: 600;
 }
@@ -125,11 +126,11 @@ body .menus .order:hover {
   font-size: 1.3em;
 }
 
-.select:hover > .check-box {
+.select:hover .check-box {
   width: 35%;
   /*voir px bug*/
 }
-.select:hover > .check-box .icon-check {
+.select:hover .check-box .icon-check {
   transform: rotate(0deg);
 }
 

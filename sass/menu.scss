@@ -77,7 +77,7 @@ body
             margin: 5px 0 0 0;
         }
 
-        a
+        .select
         {
             background-color: white;
             display: flex;            
@@ -106,18 +106,15 @@ body
                     font-size: .8em;
                 }
             }
+            .content-price
+            {
+                display:flex;
+                overflow: hidden;
+            }
             .price
             {
                 display: flex;
-
-
-
-
-
-                position: absolute;
                 overflow: hidden;
-                right: 10px;                
-                top: 20px;
                 font-size: .8em;
                 font-weight: 600;
 
@@ -163,7 +160,7 @@ body
 }
 
 
-.select:hover > .check-box /* box de selection*/
+.select:hover .check-box /* box de selection*/
 {
     width: 35%; /*voir px bug*/
     .icon-check
