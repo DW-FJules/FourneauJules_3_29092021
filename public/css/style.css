@@ -1,9 +1,18 @@
+@charset "UTF-8";
 body {
   width: auto;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+}
 body header .logo-menus {
   width: 200px;
 }
@@ -65,6 +74,7 @@ body .menus a {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  justify-content: space-between;
 }
 body .menus a .name-plat {
   margin: 10px 0 10px 10px;
@@ -78,6 +88,7 @@ body .menus a .name-plat p {
   font-size: 0.8em;
 }
 body .menus a .price {
+  display: flex;
   position: absolute;
   overflow: hidden;
   right: 10px;
@@ -96,6 +107,38 @@ body .menus .order {
   font-size: 1em;
   margin: auto;
   display: flex;
+  transition: 2s;
+}
+body .menus .order:hover {
+  opacity: 0.8;
+  box-shadow: 9px 12px 15px -5px #b0b0b0;
+  transition: 0.75s;
+}
+
+.check-box {
+  display: flex;
+  width: 0;
+  transition: all 1s;
+  background-color: #99e2d0;
+  opacity: 1;
+  margin-right: -50px;
+}
+.check-box .icon-check {
+  margin: auto;
+  border-radius: 50%;
+  transition: transform 0.7s;
+}
+.check-box .icon-check .fa-check-circle {
+  color: white;
+  font-size: 1.3em;
+}
+
+.select:hover > .check-box {
+  width: 35%;
+  /*voir px bug*/
+}
+.select:hover > .check-box .icon-check {
+  transform: rotate(0deg);
 }
 
 header {
@@ -131,6 +174,12 @@ header .gradient {
   font-size: 1em;
   margin: auto;
   display: flex;
+  transition: 2s;
+}
+header .gradient:hover {
+  opacity: 0.8;
+  box-shadow: 9px 12px 15px -5px #b0b0b0;
+  transition: 0.75s;
 }
 
 .Functions h2 {
@@ -210,14 +259,53 @@ header .gradient {
 }
 .Restaurants .Restaurant__Cards article .heart_card .fa-heart:hover {
   font-weight: 600;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  color: transparent;
+  background: linear-gradient(0deg, #9356DC 0%, #ff79da 100%);
+  background-position: bottom;
+  /* filling par le bas*/
+  background-repeat: no-repeat;
   -webkit-background-clip: text;
+  /* only fill heart*/
   -webkit-text-fill-color: transparent;
-  background-size: auto;
-  animation: progress-heart 0.8s ease;
+  animation: heart-filling 1.2s ease;
 }
 
+.menu__delay {
+  animation: delaay 0.6s;
+  animation-timing-function: ease-in-out;
+  /*déroulement animation des Ent/Plats/Dess*/
+  animation-fill-mode: both;
+}
+
+.delay__0 {
+  animation-delay: 0s;
+}
+
+.delay__1 {
+  animation-delay: 0.6s;
+}
+
+.delay__2 {
+  animation-delay: 1s;
+}
+
+@keyframes delaay {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes heart-filling {
+  from {
+    background-size: 100% 0%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
 footer {
   background-color: #353535;
   overflow: hidden;
@@ -249,6 +337,68 @@ footer .fas {
   margin: 0 10px 0 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.loading {
+  height: 500px;
+  line-height: 500px;
+  animation: delay_spin 2s ease-in-out both;
+}
+
+/* 1st load spin */
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.spinner {
+  border: 5px solid #9356dc;
+  border-radius: 50px;
+}
+
+.spinner::after {
+  content: "";
+  border: 5px solid transparent;
+  border-radius: 50px;
+  border-top-color: #FF79DA;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  animation: spin 2s both;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes delay_spin {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
 a {
   text-decoration: none;
   list-style: none;

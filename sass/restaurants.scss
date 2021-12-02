@@ -57,12 +57,12 @@
                     &:hover
                     {
                         font-weight: 600;
-                        background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-                        color: transparent;
-                        -webkit-background-clip: text;
+                        background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
+                        background-position: bottom; /* filling par le bas*/
+                        background-repeat: no-repeat;
+                        -webkit-background-clip: text; /* only fill heart*/
                         -webkit-text-fill-color: transparent;
-                        background-size: auto;
-                        animation: progress-heart 0.8s ease;
+                        animation: heart-filling 1.2s ease;
                     }
                 }
             }
@@ -70,3 +70,40 @@
         }
     }
 }
+.menu__delay
+{
+    animation: delaay 0.6s; 
+    animation-timing-function: ease-in-out; /*déroulement animation des Ent/Plats/Dess*/
+    animation-fill-mode: both;
+}
+.delay__0 
+{
+    animation-delay: 0s;
+}
+.delay__1 
+{
+    animation-delay: 0.6s;
+}
+.delay__2 
+{
+    animation-delay: 1s;
+}
+
+@keyframes delaay 
+{
+    0%
+    {
+      opacity: 0;
+      transform: translate(100%, 0);
+    }
+    100%
+    {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+}
+
+@keyframes heart-filling {
+    from {background-size: 100% 0%; }
+    to {background-size:100% 100%;}
+  }

@@ -3,6 +3,13 @@
 
 body
 {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+
 
 
     header
@@ -79,13 +86,16 @@ body
         a
         {
             background-color: white;
-            display: flex;
+            display: flex;            
             width: 93%;
             border-radius: 10px;
             margin: 20px 0 20px 10px;
             overflow: hidden;
             cursor: pointer;
             position: relative;
+
+
+            justify-content: space-between;
             
             .name-plat
             {
@@ -104,19 +114,66 @@ body
             }
             .price
             {
+                display: flex;
+
+
+
+
+
                 position: absolute;
                 overflow: hidden;
                 right: 10px;                
                 top: 20px;
                 font-size: .8em;
                 font-weight: 600;
+
             }
         }
+
         .order
         {
             @include gradient;
-            
+            transition: 2s;
+            &:hover
+            {
+                opacity: 0.8;
+                box-shadow: 9px 12px 15px -5px #b0b0b0;
+                transition: 0.75s;
+            }
+
             
         }
+    }
+}
+.check-box
+{
+    display: flex;
+    width: 0;
+    transition: all 1s;
+    background-color: $tertiary-color;
+  
+    opacity: 1;
+    margin-right: -50px;
+    .icon-check
+    {
+        margin: auto;
+        border-radius: 50%;
+        
+        .fa-check-circle
+        {
+          color: white;
+          font-size: 1.3em;
+        }
+        transition: transform 0.7s;
+    }
+}
+
+
+.select:hover > .check-box /* box de selection*/
+{
+    width: 35%; /*voir px bug*/
+    .icon-check
+    {
+      transform: rotate(0deg);
     }
 }
