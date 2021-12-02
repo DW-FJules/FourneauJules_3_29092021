@@ -1,16 +1,20 @@
 body {
     margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    font-size: 40px;
-    color: #fff;
-    text-align: center;
+
   }
   
   .loading {
-    height: 500px;
-    line-height: 500px;
+    height: 100vh;
+    display: flex;
     animation: delay_spin 2s ease-in-out both;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    background-color: #9493935c;
+    z-index: 100;
+    top: 0;
+
   }
   
   /* 1st load spin */
@@ -58,5 +62,6 @@ body {
     100% {
       opacity: 0;
       display: none;
+      z-index: 0;
     }
   }
