@@ -70,14 +70,21 @@ body .menus .select {
 }
 body .menus .select .name-plat {
   margin: 10px 0 10px 10px;
+  overflow: hidden;
 }
 body .menus .select .name-plat h3 {
   margin: 0 0 3px 0;
   font-size: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body .menus .select .name-plat p {
   margin: 0;
   font-size: 0.8em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 body .menus .select .content-price {
   display: flex;
@@ -88,6 +95,7 @@ body .menus .select .price {
   overflow: hidden;
   font-size: 0.8em;
   font-weight: 600;
+  margin-right: 10px;
 }
 body .menus .order {
   background: linear-gradient(#ff79da, #9356dc);
@@ -110,11 +118,10 @@ body .menus .order:hover {
 
 .check-box {
   display: flex;
-  width: 0;
   transition: all 1s;
   background-color: #99e2d0;
   opacity: 1;
-  margin-right: -50px;
+  margin-right: -40px;
 }
 .check-box .icon-check {
   margin: auto;
@@ -127,11 +134,10 @@ body .menus .order:hover {
 }
 
 .select:hover .check-box {
-  width: 35%;
-  /*voir px bug*/
+  margin-right: 0;
 }
 .select:hover .check-box .icon-check {
-  transform: rotate(0deg);
+  transform: rotate(360deg);
 }
 
 header {

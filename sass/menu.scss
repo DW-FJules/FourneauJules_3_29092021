@@ -94,16 +94,25 @@ body
             .name-plat
             {
                 margin: 10px 0 10px 10px;
+                overflow: hidden;
             
                 h3
                 {
                     margin: 0 0 3px 0;
                     font-size: 1em;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+
                 }
                 p
                 {
                     margin: 0;
                     font-size: .8em;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+
                 }
             }
             .content-price
@@ -117,6 +126,7 @@ body
                 overflow: hidden;
                 font-size: .8em;
                 font-weight: 600;
+                margin-right:10px;
 
             }
         }
@@ -139,12 +149,11 @@ body
 .check-box
 {
     display: flex;
-    width: 0;
     transition: all 1s;
     background-color: $tertiary-color;
   
     opacity: 1;
-    margin-right: -50px;
+    margin-right: -40px;
     .icon-check
     {
         margin: auto;
@@ -162,7 +171,7 @@ body
 
 .select:hover .check-box /* box de selection*/
 {
-    width: 35%; /*voir px bug*/
+    margin-right: 0;
     .icon-check
     {
       transform: rotate(0deg);
