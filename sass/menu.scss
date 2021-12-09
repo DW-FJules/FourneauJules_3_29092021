@@ -161,7 +161,7 @@ body
     background-color: $tertiary-color;
 
     opacity: 1;
-    margin-right: -40px;
+    margin-right: -42px;
 
     .check-icon
     {
@@ -188,9 +188,6 @@ body
 .select:hover .check-box /* box de selection*/
 {
     margin-right: 0;
-
-
-
 }
 
 .select:hover .fa-check-circle {

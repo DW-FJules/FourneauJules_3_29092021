@@ -127,7 +127,7 @@ body .menus .order:hover {
   transition: all 1s;
   background-color: #99e2d0;
   opacity: 1;
-  margin-right: -40px;
+  margin-right: -42px;
 }
 .check-box .check-icon {
   display: inline-block;
