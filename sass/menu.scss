@@ -48,14 +48,22 @@ body
             @media screen and (min-width: 1024px) and (max-width: 2560px)
             {
                 display: flex;
-            }
+                flex-wrap: wrap;
+            }   
             article
             {
-                @media screen and (min-width: 767px) and (max-width: 2560px)
+                @media screen and (min-width: 767px) and (max-width: 1024x)
                 {
-                    width: 40%;
+                    width: 50%;
                 }
+                @media screen and (min-width: 1024px) and (max-width: 2560px)
+                {
+                    width: 33%;
+                }
+
+
             }
+
 
         }
 
@@ -151,29 +159,59 @@ body
     display: flex;
     transition: all 1s;
     background-color: $tertiary-color;
-  
+
     opacity: 1;
     margin-right: -40px;
-    .icon-check
+
+    .check-icon
     {
+        display: inline-block;
         margin: auto;
         border-radius: 50%;
-        
+
+
         .fa-check-circle
         {
           color: white;
           font-size: 1.3em;
+
         }
-        transition: transform 0.7s;
     }
 }
+
+
+        
+
+
 
 
 .select:hover .check-box /* box de selection*/
 {
     margin-right: 0;
-    .icon-check
+
+
+
+}
+
+.select:hover .fa-check-circle {
+transition: 0.9s;
+transform: rotate(-360deg);}
+
+.fa-heart
+{
+    &:hover
     {
-      transform: rotate(0deg);
+        font-weight: 600;
+        background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%);
+        background-position: bottom; /* filling par le bas*/
+        background-repeat: no-repeat;
+        -webkit-background-clip: text; /* only fill heart*/
+        -webkit-text-fill-color: transparent;
+        animation: heart-filling 1.2s ease;
     }
+}
+
+@keyframes heart-filling {
+    from {background-size: 100% 0%; }
+    to {background-size:100% 100%;}
 }

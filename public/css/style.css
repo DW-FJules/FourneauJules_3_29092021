@@ -37,11 +37,17 @@ body .menus .heart_menu {
 @media screen and (min-width: 1024px) and (max-width: 2560px) {
   body .menus .flex {
     display: flex;
+    flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 767px) and (max-width: 2560px) {
+@media screen and (min-width: 767px) and (max-width: 1024x) {
   body .menus .flex article {
-    width: 40%;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 2560px) {
+  body .menus .flex article {
+    width: 33%;
   }
 }
 body .menus h2 {
@@ -123,12 +129,12 @@ body .menus .order:hover {
   opacity: 1;
   margin-right: -40px;
 }
-.check-box .icon-check {
+.check-box .check-icon {
+  display: inline-block;
   margin: auto;
   border-radius: 50%;
-  transition: transform 0.7s;
 }
-.check-box .icon-check .fa-check-circle {
+.check-box .check-icon .fa-check-circle {
   color: white;
   font-size: 1.3em;
 }
@@ -136,14 +142,37 @@ body .menus .order:hover {
 .select:hover .check-box {
   margin-right: 0;
 }
-.select:hover .check-box .icon-check {
-  transform: rotate(360deg);
+
+.select:hover .fa-check-circle {
+  transition: 0.9s;
+  transform: rotate(-360deg);
 }
 
+.fa-heart:hover {
+  font-weight: 600;
+  background: linear-gradient(0deg, #9356DC 0%, #ff79da 100%);
+  background-position: bottom;
+  /* filling par le bas*/
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  /* only fill heart*/
+  -webkit-text-fill-color: transparent;
+  animation: heart-filling 1.2s ease;
+}
+
+@keyframes heart-filling {
+  from {
+    background-size: 100% 0%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
 header {
   text-align: center;
   padding: 10px 0 0 0;
   background-color: white;
+  position: relative;
 }
 header #logo-accueil {
   width: 150px;
@@ -153,7 +182,7 @@ header #logo-accueil {
 header .icon-input {
   display: flex;
   justify-content: center;
-  padding: 5px 0;
+  padding: 15px 0;
   background-color: #F2F2F2;
   box-shadow: inset 0px 2px 3px 0px #d1d1d1;
 }
@@ -181,6 +210,11 @@ header .gradient:hover {
   transition: 0.75s;
 }
 
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .Functions {
+    text-align: center;
+  }
+}
 .Functions h2 {
   margin: 20px;
 }
@@ -309,8 +343,9 @@ footer {
   background-color: #353535;
   overflow: hidden;
 }
-@media screen and (min-width: 1024px) and (max-width: 2560px) {
+@media screen and (min-width: 767px) and (max-width: 2560px) {
   footer {
+    text-align: center;
     /*display flex*/
   }
 }
@@ -320,11 +355,12 @@ footer h2 {
   font-size: 1em;
   font-weight: 300;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 footer ul {
   list-style: none;
   padding: 0;
+  margin-left: 20px;
 }
 footer li {
   color: white;
