@@ -8,10 +8,14 @@ body
 
     header
     {
-        
-        .logo-menus
+        .container
         {
-            width: 200px;
+            display: flex;
+            .logo-menus
+            {
+                width: 200px;
+                margin-left: 50px;
+            }
         }
     }
 
